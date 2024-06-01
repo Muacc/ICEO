@@ -1,0 +1,82 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+	},
+
+	"pages": [{
+			"path": "pages/tabbar/index",
+			"style": {
+				"navigationBarTitleText": "ICEO",
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/projectDetails/projectDetails",
+			"style": {
+				"navigationBarTitleText": "方案详情",
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/order/orderList",
+			"style": {
+				"navigationBarTitleText": "订单",
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/tabbar/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path" : "pages/form/brand",
+			"style" : 
+			{
+				"navigationBarTitleText" : "品牌名称填写"
+			}
+		}
+	], 
+	"subPackages": [
+		{
+			"root": "pages_A", 
+			"pages": [
+				{
+					"path": "demo/demo",
+					"style": {
+						"navigationBarTitleText": "demo" 
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "ICEO",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#B7BED8",
+		"selectedColor": "#005AFD",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+			"pagePath": "pages/tabbar/index",
+			"iconPath": "static/tabbar/hometab.png",
+			"selectedIconPath": "static/tabbar/homesel.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/order/orderList",
+			"iconPath": "static/tabbar/ddtj.png",
+			"selectedIconPath": "static/tabbar/ddtjsel.png",
+			"text": "订单"
+		}, {
+			"pagePath": "pages/tabbar/my",
+			"iconPath": "static/tabbar/mytab.png",
+			"selectedIconPath": "static/tabbar/mysel.png",
+			"text": "我的"
+		}]
+	}
+}

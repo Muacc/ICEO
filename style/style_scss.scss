@@ -1,0 +1,298 @@
+/* 颜色 */
+.col_E81B27 { color: #E81B27; }
+.col_FF5555 { color: #FF5555; }
+.col_E60012 { color: #E60012; }
+.col_FE1515 { color: #FE1515; }
+.col_25BFA7 { color: #25BFA7; }
+.col_FF590F { color: #FF590F; }
+.col_B3B3B3 { color: #B3B3B3; }
+.col_2EA5E2 { color: #2EA5E2; }
+.col_01B6B8 { color: #01B6B8; }
+.col_FF3F45 { color: #FF3F45; }
+.col_03C6BF { color: #03C6BF; }
+.col_E42419 { color: #E42419; }
+.col_FF0101 { color: #FF0101; }
+.col_FF0000 { color: #FF0000; }
+.col_FF5E00 { color: #FF5E00; }
+.col_3DBF7F { color: #3DBF7F; }
+.col_0ECE93 { color: #0ECE93; }
+.col_EB1513 { color: #EB1513; }
+.col_EA3F49 { color: #EA3F49; }
+.col_108EE9 { color: #108EE9; }
+.col_FE9600 { color: #FE9600; }
+.col_1F74F6 { color: #1F74F6; }
+.col_B7BED8 { color: #B7BED8; }
+.col_FED130 { color: #FED130; }
+.col_2BB09F { color: #2BB09F; }
+.col_FFB62D { color: #FFB62D; }
+.col_F23445 { color: #F23445; }
+.col_63A35C { color: #63A35C; }
+.col_3DBF7F { color: #3DBF7F; }
+.col_EC232B { color: #EC232B; }
+.col_FF9353 { color: #FF9353; }
+.col_005AFD { color: #005AFD; }
+.col_0654DF { color: #0654DF; }
+.bg0654DF {background-color: #0654DF;}
+.bg005AFD {background-color: #005AFD;}
+.bgFF9353 {background-color: #FF9353;}
+.bgEC232B {background-color: #EC232B;}
+.bg3DBF7F {background-color: #3DBF7F;}
+.bg63A35C {background-color: #63A35C;}
+.bgF23445 {background-color: #F23445;}
+.bgFFB62D {background-color: #FFB62D;}
+.bg2BB09F {background-color: #2BB09F;}
+.bgFED130 {background-color: #FED130;}
+.bgEB1513 {background-color: #EB1513;}
+.bgFE9600 {background-color: #FE9600;}
+.bg1F74F6 {background-color: #1F74F6;}
+
+
+button::after {
+	border: none;
+}
+button {
+	background-color: transparent;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	line-height:inherit;
+	border-radius:0;
+}
+
+
+
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+	z-index: 1;
+	word-break: break-word;
+}
+//设置padding和border 不会改变盒子原有的大小//设置padding和border 不会改变盒子原有的大小
+
+// // 定义flex等分
+@for $i from 0 through 12 {
+	.f-#{$i} {
+		flex: $i;
+	}
+	
+}
+/* 
+编译后的css代码
+.f-1{
+	flex: 1;
+}
+.f-2{
+	flex: 2;
+}
+.f-3{
+	flex: 3;
+}
+ .f-4{
+ 	flex: 4;
+ }
+ .f-5{
+ 	flex: 5;
+ }
+ .f-6{
+ 	flex: 6;
+ }
+ .f-7{
+ 	flex: 7;
+ }
+ .f-8{
+ 	flex: 8;
+ }
+ .f-9{
+ 	flex: 9;
+ }
+ .f-10{
+ 	flex: 10;
+ }
+ .f-11{
+ 	flex: 11;
+ }
+ .f-12{
+ 	flex: 12;
+ }
+ */
+//定义zindex层级
+@for $i from 0 through 1000 {
+	.zi-#{$i} {
+		z-index: $i;
+	}
+	
+}
+// 定义字体(rpx)单位，10~100rpx  fs-10 ~ fs-100
+@for $i from 10 through 100 {
+	.fs-#{$i} {
+		font-size: $i + rpx;
+	}
+}
+// 定义内外边距，历遍0-500
+@for $i from 0 through 500 {
+	//m-all-30
+	.m-all-#{$i} {
+		margin: $i + rpx;
+	}
+	//p-all-30
+	.p-all-#{$i} {
+		padding: $i + rpx;
+	}
+	@each $short, $long in l left, t top, r right, b bottom {
+		// 缩写版，结果如： ml-1 mr-10 mb-100 mt-135
+		// 定义外边距
+			.m#{$short}-#{$i} {
+				margin-#{$long}: $i + rpx;
+			}
+		// 定义内边距，结果如：pl-30 pr-30 pb-30 pt-30
+			.p#{$short}-#{$i} {
+				padding-#{$long}: $i + rpx;
+			}
+		}
+}
+//全局宽高
+@for $i from 0 through 750 {
+	// w-0 ~ w-750
+	.w-#{$i} {
+		width: $i + rpx;
+		max-width: $i + rpx;
+		min-width: $i + rpx;
+	}
+	// h-0 ~ h-750
+	.h-#{$i} {
+		height: $i + rpx;
+		max-height: $i + rpx;
+		min-height: $i + rpx;
+	}
+	// lh-0 ~ lh-750
+	.lh-#{$i} {
+		line-height: $i + rpx;
+	}
+}
+
+//全局圆角 行高 br-0 ~ br-100
+@for $i from 0 through 100 {
+	// w-0 ~ w-750
+	.br-#{$i} {
+		border-radius: $i + rpx;
+	}
+	// h-0 ~ h-750
+}
+/* 对齐方式 */
+.tct{text-align: center;}
+.trt{text-align: right;}
+.tlt{text-align: left;}
+.w100{width: 100%;}
+.box{box-sizing: border-box;}
+.relative{position: relative;}
+.absolute{position: absolute;}
+.fixed{position: fixed;}
+.d-none{display: none;}
+.d-block{display: inline-block;}
+.blb_f1{border-bottom: 3rpx solid #F1F1F1;}
+.blb_ff{border-bottom: 3rpx solid #FFFFFF;}
+.ov_hidden{overflow: hidden;}
+/* 粗体 */
+.fw-b {
+	font-weight: bold;
+}
+
+.fw-l {
+	font-weight: lighter;
+}
+
+.fw-n {
+	font-weight: normal;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700;
+}
+.fw-800 {
+	font-weight: 800;
+}
+/* 特殊处理 */
+.tline {
+	text-decoration: line-through;
+	/* 加删除线 */
+}
+/* 多少行（3~15） */
+.one_overflow{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}  /* 一行隐藏 */
+.two_overflow{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+}  /* 二行隐藏 */
+.three_overflow{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:3;
+}  /* 三行隐藏 */
+/*========== flex布局相关 ==========*/
+/* http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html */
+.rows {display: flex;display: -webkit-flex;}  /* 盒子内容横向布局 */
+.rowsa {display: flex;display: -webkit-flex;justify-content: space-around;}  /* 盒子内容居中间间隙布局 */
+.rowsb {display: flex;display: -webkit-flex;justify-content: space-between;}  /* 盒子内容两端间隙布局 */
+.rowsc {display: flex;display: -webkit-flex;justify-content: center;}  /* 盒子内容居中布局 */
+.rowse {display: flex;display: -webkit-flex;justify-content: flex-end;}  /* 盒子内容结尾布局 */
+.rowsm {align-items: center;}
+.rowsw {flex-wrap: wrap;}
+.rowsl {display: flex;flex-direction: column;}  /* 盒子内容竖向中间间隙布局 */
+.rowsal {display: flex;justify-content: space-around;flex-direction: column;}  /* 盒子内容竖向中间间隙布局 */
+.rowsbl {display: flex;justify-content: space-between;flex-direction: column;}  /* 盒子内容竖向两端间隙布局 */
+.rowscl {display: flex;justify-content: center;flex-direction: column;}  /* 盒子内容竖向中间居中布局 */
+.notYet {text-align: center;font-size: 30rpx;color: #999999;padding: 30rpx 0rpx;}  /* 页面无数据 */
+.arrow{width: 7px;height: 7px;border-top: 1px solid #333333;border-right: 1px solid #333333;transform: rotate(45deg);}/* 右箭头 */
+.shadow_total{box-shadow: 0px 0px 6rpx 2rpx rgba(136,136,136,0.24);}
+.shadow_bottom{box-shadow: 2px 2px 6rpx 2rpx rgba(136,136,136,0.24);}
+image{height: auto;}
+/deep/::-webkit-scrollbar {		/* 隐藏滚动条，但依旧具备可以滚动的功能 */
+	display: none;
+	width: 0;
+	height: 0;
+	color: transparent;
+	background: transparent;
+}
+
+/* 根据设计图的主题色自行扩展颜色包*/
+.col000{color: #000000;}
+.col111{color: #111111;}
+.col222{color: #222222;}
+.col333{color: #333333;}
+.col444{color: #444444;}
+.col555{color: #555555;}
+.col666{color: #666666;}
+.col777{color: #777777;}
+.col888{color: #888888;}
+.col999{color: #999999;}
+.colfff{color: #FFFFFF;}
+.bgf1{background-color: #F1F1F1;}
+.bgf5{background-color: #F5F5F5;}
+.bgf9{background-color: #F9F9F9;}
+.bg99{background-color: #999999;}
+.bgff{background-color: #FFFFFF;}
+
+.fll{
+	float: left;
+}
+.flr{
+	float: right;
+}
